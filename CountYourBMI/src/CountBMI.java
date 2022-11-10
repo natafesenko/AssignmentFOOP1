@@ -4,11 +4,13 @@ public class CountBMI {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		// declare variables
 		double weight;
 		double height;
 		double bmi;
-	
+		
+		// Welcome message
 		System.out.println(" ██████╗ █████╗ ██╗      ██████╗██╗   ██╗██╗      █████╗ ████████╗███████╗    ██╗   ██╗ ██████╗ ██╗   ██╗██████╗     ██████╗ ███╗   ███╗██╗");
 		System.out.println("██╔════╝██╔══██╗██║     ██╔════╝██║   ██║██║     ██╔══██╗╚══██╔══╝██╔════╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗████╗ ████║██║");
 		System.out.println("██║     ███████║██║     ██║     ██║   ██║██║     ███████║   ██║   █████╗       ╚████╔╝ ██║   ██║██║   ██║██████╔╝    ██████╔╝██╔████╔██║██║");
@@ -16,20 +18,25 @@ public class CountBMI {
 		System.out.println("╚██████╗██║  ██║███████╗╚██████╗╚██████╔╝███████╗██║  ██║   ██║   ███████╗       ██║   ╚██████╔╝╚██████╔╝██║  ██║    ██████╔╝██║ ╚═╝ ██║██║");
 		System.out.println(" ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝       ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═╝");
 		
+		// creates a new Scanner instance which points to the input stream passed as argument
 		Scanner in = new Scanner(System.in);
 		
-		//
+		// get the data typed in the Keyboard
 		System.out.println("What your Weight? (lb)");
 		weight = in.nextDouble();
 		
+		//if (weight == getType(int weight));
+				
 		System.out.println("What your Height? (in)");
 		height = in.nextDouble();
 		
+		 
+		
 		// Count BMI in Imperial BMI Formula
-		// BMI = weight (lb) * 703 / (height (in))2
-				
+		// BMI = weight (lb) * 703 / (height (in))2	
 		bmi = (weight*703/(height*height));
 		
+		// Casting int to double
 		int i_bmi = (int) bmi;
 		
 		System.out.println("Your BMI is " + i_bmi);
