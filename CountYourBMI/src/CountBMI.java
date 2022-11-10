@@ -4,12 +4,21 @@ public class CountBMI {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// declare variables
 		double weight;
 		double height;
 		double bmi;
+	
+		System.out.println(" ██████╗ █████╗ ██╗      ██████╗██╗   ██╗██╗      █████╗ ████████╗███████╗    ██╗   ██╗ ██████╗ ██╗   ██╗██████╗     ██████╗ ███╗   ███╗██╗");
+		System.out.println("██╔════╝██╔══██╗██║     ██╔════╝██║   ██║██║     ██╔══██╗╚══██╔══╝██╔════╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗████╗ ████║██║");
+		System.out.println("██║     ███████║██║     ██║     ██║   ██║██║     ███████║   ██║   █████╗       ╚████╔╝ ██║   ██║██║   ██║██████╔╝    ██████╔╝██╔████╔██║██║");
+		System.out.println("██║     ██╔══██║██║     ██║     ██║   ██║██║     ██╔══██║   ██║   ██╔══╝        ╚██╔╝  ██║   ██║██║   ██║██╔══██╗    ██╔══██╗██║╚██╔╝██║██║");
+		System.out.println("╚██████╗██║  ██║███████╗╚██████╗╚██████╔╝███████╗██║  ██║   ██║   ███████╗       ██║   ╚██████╔╝╚██████╔╝██║  ██║    ██████╔╝██║ ╚═╝ ██║██║");
+		System.out.println(" ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝       ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═╝");
 		
 		Scanner in = new Scanner(System.in);
 		
+		//
 		System.out.println("What your Weight? (lb)");
 		weight = in.nextDouble();
 		
@@ -26,29 +35,31 @@ public class CountBMI {
 		System.out.println("Your BMI is " + i_bmi);
 		
 		if (i_bmi < 15 ) {
-			System.out.println("Very severely underweight");
+			System.out.println("You have a Very severely underweight");
 		}
 		else if (i_bmi <= 16) {
-			System.out.println("Severely underweight");
+			System.out.println("You have a Severely underweight");
 		}
 		else if (i_bmi <= 18.5) {
-			System.out.println("Underweight");
+			System.out.println("You have a Underweight");
 		}
 		else if (i_bmi <= 25) {
-			System.out.println("Normal (healthy weight)");
+			System.out.println("You have a Normal (healthy weight)");
 		}
 		else if (i_bmi >= 30) {
-			System.out.println("Overweight");
+			System.out.println("You have a Overweight");
 		}
 		else if (i_bmi >= 35) {
-			System.out.println("Moderately obese");
+			System.out.println("You have a Moderately obese");
 		}
 		else if (i_bmi >= 40) {
-			System.out.println("Severely obese");
+			System.out.println("You have a Severely obese");
 		}
 		else if (i_bmi > 40 ) {
-			System.out.println("Very severely obese" );
+			System.out.println("You have a Very severely obese");
 		}
+		
+		
 
 	}
 
