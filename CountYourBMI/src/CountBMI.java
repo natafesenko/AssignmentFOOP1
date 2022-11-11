@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException; 
 
 public class CountBMI {
 
@@ -23,33 +24,28 @@ public class CountBMI {
 		
 		while(true) {
 			try {
-				System.out.print("What your Weight? (lb)");
+				System.out.println("What your Weight? (lb)");
 				weight = in.nextDouble();
-				System.out.print("Thanks");
+				System.out.println("Thanks");
 				break;
-			}catch(InputMismatchExeption ex) {
+			}catch(InputMismatchException ex) {
+				System.out.println("Error in your unput");
+				in.reset();
+				return;
+			}
+		}
+		
+		while(true) {
+			try {
+				System.out.println("What your Height? (in)");
+				height = in.nextDouble();
+				System.out.println("Thanks");
+				break;
+			}catch(InputMismatchException ex) {
 				System.out.println("Error in your unput");
 				in.reset();
 			}
 		}
-		
-		// get the data typed in the Keyboard
-		System.out.println("What your Weight? (lb)");
-		weight = in.nextDouble();
-	
-	    //try {
-	      //  weight = in.nextDouble();
-	   // } catch (Exception e) {
-	     //   System.err.println("That's not a number!");
-	     //   weight = in.nextDouble(); // Wrong code, this bring error.
-	   // }
-		
-		//if (weight == getType(int weight));
-				
-		System.out.println("What your Height? (in)");
-		height = in.nextDouble();
-		
-		 
 		
 		// Count BMI in Imperial BMI Formula
 		// BMI = weight (lb) * 703 / (height (in))2	
