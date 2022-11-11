@@ -21,6 +21,18 @@ public class CountBMI {
 		// creates a new Scanner instance which points to the input stream passed as argument
 		Scanner in = new Scanner(System.in);
 		
+		while(true) {
+			try {
+				System.out.print("What your Weight? (lb)");
+				weight = in.nextDouble();
+				System.out.print("Thanks");
+				break;
+			}catch(InputMismatchExeption ex) {
+				System.out.println("Error in your unput");
+				in.reset();
+			}
+		}
+		
 		// get the data typed in the Keyboard
 		System.out.println("What your Weight? (lb)");
 		weight = in.nextDouble();
@@ -41,7 +53,7 @@ public class CountBMI {
 		
 		// Count BMI in Imperial BMI Formula
 		// BMI = weight (lb) * 703 / (height (in))2	
-		bmi = (weight*703/(height*height))/2;
+		bmi = (weight*703/(height*height));
 		
 		// Casting int to double
 		int i_bmi = (int) bmi;
