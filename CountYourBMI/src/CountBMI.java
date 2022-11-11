@@ -24,6 +24,13 @@ public class CountBMI {
 		// get the data typed in the Keyboard
 		System.out.println("What your Weight? (lb)");
 		weight = in.nextDouble();
+	
+	    //try {
+	      //  weight = in.nextDouble();
+	   // } catch (Exception e) {
+	     //   System.err.println("That's not a number!");
+	     //   weight = in.nextDouble(); // Wrong code, this bring error.
+	   // }
 		
 		//if (weight == getType(int weight));
 				
@@ -34,7 +41,7 @@ public class CountBMI {
 		
 		// Count BMI in Imperial BMI Formula
 		// BMI = weight (lb) * 703 / (height (in))2	
-		bmi = (weight*703/(height*height));
+		bmi = (weight*703/(height*height))/2;
 		
 		// Casting int to double
 		int i_bmi = (int) bmi;
