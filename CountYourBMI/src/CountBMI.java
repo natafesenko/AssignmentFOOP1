@@ -22,27 +22,35 @@ public class CountBMI {
 		// creates a new Scanner instance which points to the input stream passed as argument
 		Scanner in = new Scanner(System.in);
 		
+		// work with variable weight
 		while(true) {
 			try {
 				System.out.println("What your Weight? (lb)");
+				// initial variable weight
 				weight = in.nextDouble();
 				System.out.println("Thanks");
 				break;
+			// processing the error
 			}catch(InputMismatchException ex) {
-				System.out.println("Error in your unput");
+				System.out.println("Error in your input");
+				//resets this scanner
 				in.reset();
 				return;
 			}
 		}
 		
+		// work with variable height
 		while(true) {
 			try {
 				System.out.println("What your Height? (in)");
+				// initial variable height
 				height = in.nextDouble();
 				System.out.println("Thanks");
 				break;
+			// processing the error
 			}catch(InputMismatchException ex) {
-				System.out.println("Error in your unput");
+				System.out.println("Error in your input");
+				//resets this scanner
 				in.reset();
 			}
 		}
@@ -80,8 +88,6 @@ public class CountBMI {
 		else if (i_bmi > 40 ) {
 			System.out.println("You have a Very severely obese");
 		}
-		
-		
 
 	}
 
