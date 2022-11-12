@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException; 
 
 public class CountBMI {
 
@@ -21,27 +22,42 @@ public class CountBMI {
 		// creates a new Scanner instance which points to the input stream passed as argument
 		Scanner in = new Scanner(System.in);
 		
-		// get the data typed in the Keyboard
-		System.out.println("What your Weight? (lb)");
-		weight = in.nextDouble();
-	
-	    //try {
-	      //  weight = in.nextDouble();
-	   // } catch (Exception e) {
-	     //   System.err.println("That's not a number!");
-	     //   weight = in.nextDouble(); // Wrong code, this bring error.
-	   // }
+		// work with variable weight
+		while(true) {
+			try {
+				System.out.println("What your Weight? (lb)");
+				// initial variable weight
+				weight = in.nextDouble();
+				System.out.println("Thanks");
+				break;
+			// processing the error
+			}catch(InputMismatchException ex) {
+				System.out.println("Error in your input");
+				//resets this scanner
+				in.reset();
+				return;
+			}
+		}
 		
-		//if (weight == getType(int weight));
-				
-		System.out.println("What your Height? (in)");
-		height = in.nextDouble();
-		
-		 
+		// work with variable height
+		while(true) {
+			try {
+				System.out.println("What your Height? (in)");
+				// initial variable height
+				height = in.nextDouble();
+				System.out.println("Thanks");
+				break;
+			// processing the error
+			}catch(InputMismatchException ex) {
+				System.out.println("Error in your input");
+				//resets this scanner
+				in.reset();
+			}
+		}
 		
 		// Count BMI in Imperial BMI Formula
 		// BMI = weight (lb) * 703 / (height (in))2	
-		bmi = (weight*703/(height*height))/2;
+		bmi = (weight*703/(height*height));
 		
 		// Casting int to double
 		int i_bmi = (int) bmi;
@@ -72,8 +88,6 @@ public class CountBMI {
 		else if (i_bmi > 40 ) {
 			System.out.println("You have a Very severely obese");
 		}
-		
-		
 
 	}
 
