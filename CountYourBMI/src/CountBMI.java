@@ -11,31 +11,26 @@ public class CountBMI {
 		// TODO Auto-generated method stub
 		welcomeMessage();
 		Scanner in = new Scanner(System.in);
-
-		
 		weight = UserInput(in, "What your Weight? (lb)");
 		height = UserInput(in, "What your Height? (in)");
 		bmi = CountBmi(weight, height);
-		CastingBmi(bmi);
+		CastingBmi(in, bmi);
 		compareBMI(bmi);
 	}	
 	
 	public static void welcomeMessage() {
-		
 		// Welcome message
-				System.out.println(" ██████╗ █████╗ ██╗      ██████╗██╗   ██╗██╗      █████╗ ████████╗███████╗    ██╗   ██╗ ██████╗ ██╗   ██╗██████╗     ██████╗ ███╗   ███╗██╗");
-				System.out.println("██╔════╝██╔══██╗██║     ██╔════╝██║   ██║██║     ██╔══██╗╚══██╔══╝██╔════╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗████╗ ████║██║");
-				System.out.println("██║     ███████║██║     ██║     ██║   ██║██║     ███████║   ██║   █████╗       ╚████╔╝ ██║   ██║██║   ██║██████╔╝    ██████╔╝██╔████╔██║██║");
-				System.out.println("██║     ██╔══██║██║     ██║     ██║   ██║██║     ██╔══██║   ██║   ██╔══╝        ╚██╔╝  ██║   ██║██║   ██║██╔══██╗    ██╔══██╗██║╚██╔╝██║██║");
-				System.out.println("╚██████╗██║  ██║███████╗╚██████╗╚██████╔╝███████╗██║  ██║   ██║   ███████╗       ██║   ╚██████╔╝╚██████╔╝██║  ██║    ██████╔╝██║ ╚═╝ ██║██║");
-				System.out.println(" ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝       ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═╝");
+		System.out.println(" ██████╗ █████╗ ██╗      ██████╗██╗   ██╗██╗      █████╗ ████████╗███████╗    ██╗   ██╗ ██████╗ ██╗   ██╗██████╗     ██████╗ ███╗   ███╗██╗");
+		System.out.println("██╔════╝██╔══██╗██║     ██╔════╝██║   ██║██║     ██╔══██╗╚══██╔══╝██╔════╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗████╗ ████║██║");
+		System.out.println("██║     ███████║██║     ██║     ██║   ██║██║     ███████║   ██║   █████╗       ╚████╔╝ ██║   ██║██║   ██║██████╔╝    ██████╔╝██╔████╔██║██║");
+		System.out.println("██║     ██╔══██║██║     ██║     ██║   ██║██║     ██╔══██║   ██║   ██╔══╝        ╚██╔╝  ██║   ██║██║   ██║██╔══██╗    ██╔══██╗██║╚██╔╝██║██║");
+		System.out.println("╚██████╗██║  ██║███████╗╚██████╗╚██████╔╝███████╗██║  ██║   ██║   ███████╗       ██║   ╚██████╔╝╚██████╔╝██║  ██║    ██████╔╝██║ ╚═╝ ██║██║");
+		System.out.println(" ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝       ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═╝");
 		
 	}
 	
-	public static Double UserInput(Scanner in, String question) {
-		
-		// Scanner in = new Scanner(System.in);
-	    // work with variable height
+	public static double UserInput(Scanner in, String question) {
+		// work with variable height
 	    double output;
 	    while (true) {
 	      try {
@@ -54,22 +49,21 @@ public class CountBMI {
 	    if (Double.doubleToRawLongBits(output) <= 0) {
 	      System.err.println("you must provide a correct input(double precision float)");
 	    }
-	    
 	    return output;
 	}
 	
-	
-	
 	public static double CountBmi(double weight, double height) {
 		// Count BMI in Imperial BMI Formula
-		// BMI = weight (lb) * 703 / (height (in))2	
-		return bmi = (weight/(height*height)*703);
+		// BMI = weight (lb) * 703 / (height (in))	
+		return bmi = weight * 703 / (height);
 	}
-				
-	public static void CastingBmi(double bmi) {
-	    // Casting int to double
+	
+	public static void CastingBmi(Scanner in, double bmi)  {
+		System.out.println("Round your BMI? If answer yes, you should write 1, if no - 0");
+		  
+		// Casting int to double
 	    int question = in.nextInt();
-	    System.out.println("Round your BMI? If answer yes, you should write 1, if no - 0");
+	    
 	    if (question == 1) {
 		      int intBmi = (int) bmi;
 		      System.out.println("Your BMI is " + intBmi);
@@ -80,8 +74,7 @@ public class CountBMI {
 	    }
 	    return;
 	}
-	    
-
+	
 	public static void compareBMI (double bmi) {
 	
 		if (bmi < 15 ) {
@@ -108,10 +101,5 @@ public class CountBMI {
 		else if (bmi > 40 ) {
 			System.out.println("You have a Very severely obese");
 		}
-		
-		
 	}
-	
-				
-
 }
