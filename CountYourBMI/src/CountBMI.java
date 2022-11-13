@@ -89,6 +89,7 @@ public class CountBMI {
 			System.out.println("You have a Very severely obese");
 		}
 	}
+
 	public static void CastingBmi(Scanner in, double bmi)  {
 		System.out.println("Round your BMI? If answer yes, you should write 1, if no - 0");  
 		// Casting int to double
@@ -104,4 +105,5 @@ public class CountBMI {
 	    }
 	    return;
 	}
+
 }
