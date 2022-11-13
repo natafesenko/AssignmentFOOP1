@@ -2,15 +2,20 @@ import java.util.Scanner;
 import java.util.InputMismatchException; 
 
 public class CountBMI {
-
-
 	// declare variables
-	double weight;
-	double height;
+	static double weight;
+	static double height;
 	double bmi;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		welcomeMessage();
+		Scanner in = new Scanner(System.in);
+
+		
+		weight = UserInput(in, "What your Weight? (lb)");
+		height = UserInput(in, "What your Height? (in)");
+		
 
 		
 		
@@ -29,32 +34,38 @@ public class CountBMI {
 		
 	}
 	
+	public static Double UserInput(Scanner in, String question) {
+		
+		// Scanner in = new Scanner(System.in);
+	    // work with variable height
+	    double output;
+	    while (true) {
+	      try {
+	        System.out.println(question);
+	        // initial variable height
+	        output = in.nextDouble();
+	        System.out.println("Thanks");
+	        break;
+	        // processing the error
+	      } catch (InputMismatchException ex) {
+	        System.out.println("Error in your input");
+	        // resets this scanner
+	        in.reset();
+	      }
+	    }
+	    if (Double.doubleToRawLongBits(output) <= 0) {
+	      System.err.println("you must provide a correct input(double precision float)");
+	    }
+	    
+	    return output;
+	}
+	
 	public static void UsersInputWeight(double weight) {
 		
 		// creates a new Scanner instance which points to the input stream passed as argument
-		Scanner in = new Scanner(System.in);
 		
-        if (Double.doubleToRawLongBits(weight) <= 0) {
-            System.err.println("you must weight something!");
-          }
-				
-		// work with variable weight
-		while(true) {
-			try {
-				System.out.println("What your Weight? (lb)");
-				// initial variable weight
-				weight = in.nextDouble();
-				System.out.println("Thanks");
-				break;
-				// processing the error
-			}catch(InputMismatchException ex) {
-				System.out.println("Error in your input");
-				//resets this scanner
-				in.reset();
-				return;
-			}
-				
-		}			
+		Scanner in = new Scanner(System.in);
+       
 	}
 	
 	public static void UsersInput(double height) {
