@@ -30,7 +30,7 @@ public class CountBMI {
 	}
 	
 	public static double UserInput(Scanner in, String question) {
-		// work with variable height
+	    // work with variable height
 	    double output;
 	    while (true) {
 	      try {
@@ -38,19 +38,22 @@ public class CountBMI {
 	        // initial variable height
 	        output = in.nextDouble();
 	        System.out.println("Thanks");
-	        break;
 	        // processing the error
 	      } catch (InputMismatchException ex) {
 	        System.out.println("Error in your input");
 	        // resets this scanner
 	        in.reset();
+	        in.nextLine();
+	        continue;
 	      }
-	    }
-	    if (Double.doubleToRawLongBits(output) <= 0) {
-	      System.err.println("you must provide a correct input(double precision float)");
+	      if (Double.doubleToRawLongBits(output) <= 0) {
+	        System.err.println("you must provide a correct input(double precision float)");
+	        continue;
+	      }
+	      break;
 	    }
 	    return output;
-	}
+	  }
 	
 	public static double CountBmi(double weight, double height) {
 		// Count BMI in Imperial BMI Formula
