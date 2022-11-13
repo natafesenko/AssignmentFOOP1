@@ -5,7 +5,7 @@ public class CountBMI {
 	// declare variables
 	static double weight;
 	static double height;
-	double bmi;
+	static double bmi;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,11 +15,9 @@ public class CountBMI {
 		
 		weight = UserInput(in, "What your Weight? (lb)");
 		height = UserInput(in, "What your Height? (in)");
-		
-
-		
-		
-		
+		bmi = CountBmi(weight, height);
+		CastingBmi(bmi);
+		compareBMI(bmi);
 	}	
 	
 	public static void welcomeMessage() {
@@ -60,67 +58,32 @@ public class CountBMI {
 	    return output;
 	}
 	
-	public static void UsersInputWeight(double weight) {
-		
-		// creates a new Scanner instance which points to the input stream passed as argument
-		
-		Scanner in = new Scanner(System.in);
-       
-	}
 	
-	public static void UsersInput(double height) {
-		
-		Scanner in = new Scanner(System.in);
-		
-       if (Double.doubleToRawLongBits(height) <= 0) {
-            System.err.println("you must have height!");
-          }
-		 //work with variable height
-		while(true) {
-			try {
-				System.out.println("What your Height? (in)");
-				// initial variable height
-				height = in.nextDouble();
-			System.out.println("Thanks");
-				break;
-			// processing the error
-			}catch(InputMismatchException ex) {
-				System.out.println("Error in your input");
-				//resets this scanner
-				in.reset();
-			}
-		}
-		
-	}
 	
-	public static void CountBmi(double bmi, double weight, double height) {
+	public static double CountBmi(double weight, double height) {
 		// Count BMI in Imperial BMI Formula
 		// BMI = weight (lb) * 703 / (height (in))2	
-		bmi = (weight/(height*height)*703);
-		
+		return bmi = (weight/(height*height)*703);
 	}
 				
 	public static void CastingBmi(double bmi) {
-		
-		// Casting int to double
-		Scanner in = new Scanner(System.in);
-		int question = in.nextInt();
-		System.out.println("Round your BMI? If answer yes, you should write 1, if no - 0");
-		if (question == 1) { 
-			int intBmi = (int) bmi;
-			System.out.println("Your BMI is " + intBmi);
-		}
-		else if(question == 0) {
-			System.out.println("Your BMI is " + bmi);
-		}
-			
-		
+	    // Casting int to double
+	    int question = in.nextInt();
+	    System.out.println("Round your BMI? If answer yes, you should write 1, if no - 0");
+	    if (question == 1) {
+		      int intBmi = (int) bmi;
+		      System.out.println("Your BMI is " + intBmi);
+		      return;
+	    }
+	    if(question == 0) {
+	      System.out.println("Your BMI is " + bmi);
+	    }
+	    return;
 	}
+	    
+
+	public static void compareBMI (double bmi) {
 	
-	public static void compareBMI (double bmi, int intBmi) {
-		
-		System.out.println("Your BMI is " + intBmi);
-		
 		if (bmi < 15 ) {
 			System.out.println("You have a Very severely underweight");
 		}
