@@ -37,7 +37,7 @@ public class CountBMI {
 	        System.out.println(question);
 	        // initial variable height
 	        output = in.nextDouble();
-	        System.out.println("Thanks");
+	        //System.out.println("Thanks");
 	        // processing the error
 	      } catch (InputMismatchException ex) {
 	        System.out.println("Error in your input");
@@ -46,6 +46,7 @@ public class CountBMI {
 	        in.nextLine();
 	        continue;
 	      }
+	      //check that the input value is not 0
 	      if (Double.doubleToRawLongBits(output) <= 0) {
 	        System.err.println("you must provide a correct input(double precision float)");
 	        continue;
@@ -57,16 +58,15 @@ public class CountBMI {
 	
 	public static double CountBmi(double weight, double height) {
 		// Count BMI in Imperial BMI Formula
-		// BMI = weight (lb) * 703 / (height (in))	
-		return bmi = weight * 703 / (height);
+		// BMI = weight (lb) * 703 / (height (in)*(height (in))	
+		return bmi = weight * 703 / (height*height);
 	}
 	
 	public static void CastingBmi(Scanner in, double bmi)  {
-		System.out.println("Round your BMI? If answer yes, you should write 1, if no - 0");
-		  
+		System.out.println("Round your BMI? If answer yes, you should write 1, if no - 0");  
 		// Casting int to double
 	    int question = in.nextInt();
-	    
+	    // ask user how value show for him
 	    if (question == 1) {
 		      int intBmi = (int) bmi;
 		      System.out.println("Your BMI is " + intBmi);
