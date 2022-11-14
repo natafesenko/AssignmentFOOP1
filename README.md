@@ -10,15 +10,15 @@
 
 - [X] Entire Programming Code with Commenting and Prudent Printing printed from Eclipse
 
-- [x] Screen Printout of working program (1)
+- [X] Screen Printout of working program (1)
 
-- [x] Errors Documented
+- [X] Errors Documented
 
-- [x] Error Screen Printouts (2) 
+- [X] Error Screen Printouts (2) 
 
-- [ ] Conclusion
+- [X] Conclusion
 
-- [ ] Bibliography
+- [X] Bibliography
 
 ## Introduction
 
@@ -66,4 +66,22 @@ INPUT user input his answer
   IF 2
   OUTPUT "Your BMI is " + Bmi
 ```
+
+## Calculator BMI
+
+The Calculator app is a simple app written in Java.  
+You can always get the latest version of Calculator from this repository.
+
+### Features
+
+- [x] It's using Imperial BMI formula for calculation
+
+- [x] BMI weight categories as a result
+
+- [x] Conversion between int and double of measurement.
+
+### How to build and run
+
+```sh
+javac CountBMI.java && java CountBMI
 
