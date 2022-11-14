@@ -6,15 +6,15 @@
 
 - [X] Introduction
 
-- [ ] Algorithm (Flowchart and Pseudocode)
+- [X] Algorithm (Flowchart and Pseudocode)
 
 - [X] Entire Programming Code with Commenting and Prudent Printing printed from Eclipse
 
-- [ ] Screen Printout of working program (1)
+- [x] Screen Printout of working program (1)
 
-- [ ] Errors Documented
+- [x] Errors Documented
 
-- [ ] Error Screen Printouts (2) 
+- [x] Error Screen Printouts (2) 
 
 - [ ] Conclusion
 
