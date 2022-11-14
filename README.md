@@ -31,94 +31,39 @@ BMI = 703 × weight (lbs) / height (in)* height (in)
 ```
 This program calculates index BMI 
 
-{ 
-
-In the main function 
-
-     Call function welcomeMessage(); 
-
-     Make Scanner in = new Scanner(System.in); 
-
-     Call function with arguments weight = UserInput(in, "What your Weight? (lb)"); height = UserInput(in, "What your Height? (in)"); bmi = CountBmi(weight, height); CastingBmi(in, bmi); compareBMI(bmi);      
-
-} 
-
- 
-
-   
-
-function welcomeMessage(){ 
-
-Welcome message 
-
-} 
-
-function UserInput(Argument one, Argument two){ 
-
-    Initial variable height/weight, check that the input value is not 0, if 0, processing the error and resets this scanner. 
-
-   
-
-    return double variables 
-
-end 
-
-} 
-
-function CountBmi (Argument one, Argument two){ 
-
-    Count BMI in Imperial BMI Formula 
-
-    BMI = weight (lb) * 703 / (height (in)*(height (in)) 
-
-   
-
-    return double variable 
-
-end 
-
-} 
-
-function compareBMI (Argument one, Argument two){ 
-
-    If 1 print response "You have a Very severely underweight" 
-
-    If 2 print response "You have a Severely underweight" 
-
-    If 3 print response "You have a Underweight" 
-
-    If 3 print response "You have a Normal (healthy weight)" 
-
-    If 4 print response "You have a Overweight" 
-
-    If 5 print response "You have a Moderately obese" 
-
-    If 6 print response "You have a Severely obese" 
-
-    If 7 print response "You have a Very severely obese"  
-
-end 
-
-} 
-
-function CastingBmi (Argument one, Argument two){ 
-
-    Casting int to double, ask user how value show for him 
-
-    If 1 print response "Your BMI is " + intBmi 
-
-    If 2 print response "Your BMI is " + bmi 
-
-    return variable 
-
-end 
-
-} 
+OUTPUT welcomeMessage(); 
+OUTPUT "What your Weight? (lb)"
+INPUT user input his weight
+STORE the user's input in the weight variable
+INPUT user input his hieght
+STORE the user's input in the height variable
+STORE check that the input value is not 0
+  IF value = 0
+  OUTPUT "You must provide a correct input(double precision float)"
+STORE count BMI in Imperial BMI Formula
+STORE compare BMI in Imperial BMI Formula
+  IF bmi < 15 
+  OUTPUT "You have a Very severely underweight"
+  IF bmi <= 16 
+  OUTPUT "You have a Severely underweight"
+  IF bmi <= 18.5
+  OUTPUT "You have a Underweight"
+  IF bmi <= 25
+  OUTPUT "You have a Normal (healthy weight)"
+  IF bmi >= 30
+  OUTPUT "You have a Overweight"
+  IF bmi >= 35
+  OUTPUT "You have a Moderately obese"
+  IF bmi >= 40
+  OUTPUT "You have a Severely obese"
+  IF bmi > 40
+  OUTPUT "You have a Very severely obese"
+STORE casting BMI int to double
+OUTPUT ask user how value show for him
+INPUT user input his answer
+  IF 1 
+  OUTPUT "Your BMI is " + intBmi
+  IF 2
+  OUTPUT "Your BMI is " + Bmi
 ```
-=======
-As they say – well begun is half done.  So, I write simple program in Java. Why? Because I wanted to try, AND I did it! Knowing how to write, compile and execute code is a skill I'll need throughout my professional career. In this course, I've learned how to create software programs using standard coding structures and processes such as variables, constants, operators, decision logic, arrays, iteration constructs, and functions. For this assignment, I wrote an application using the Java programming language. 
-
-My program count index BMI it’s one project, one class and six methods. I use a Imperial BMI Formula 
-
-BMI = 703 × weight (lbs) / [height (in)]* [height (in)] 
 
